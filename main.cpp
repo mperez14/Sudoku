@@ -4,27 +4,27 @@
 //main.cpp: main file for sudoku
 
 #include <iostream>
-//#include "puzzle.txt"
 #include "sudoku.h"
 
 using namespace std;
 
 int main(){
-	int row, col, num;
-	Puzzle<int> sudoku1("puzzle.txt");	//number text
+	//int row, col, num;
+	cout<<"**********predefined sudoku**********"<<endl;
+	Puzzle<int> sudoku1("puzzle.txt");	//number text from class document
 	sudoku1.print();
 
+	cout<<"**********predefined wordoku**********"<<endl;
 	Puzzle<char> sudoku2("puzzle2.txt");	//character text
 	sudoku2.print();
 
-	cout<<"Enter number: ";
-	cin>>num;
-	cout<<"Enter row: ";
-	cin>>row;
-	cout<<"Enter column: ";
-	cin>>col;
-	sudoku1.add(row-1, col-1, num);
+	cout<<"**********almost finished sudoku**********"<<endl;
+	Puzzle<int> sudoku3("puzzle3.txt");	//test complete() function. Add 1 to row 9, col 9
+	sudoku3.play();
 
-	sudoku1.print();
+	cout<<"**********blank sudoku**********"<<endl;
+	Puzzle<int> sudoku4;	//init blank sudoku board
+	sudoku4.play();	
+
 
 }
